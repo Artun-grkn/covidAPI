@@ -1,0 +1,116 @@
+/* Algemene body-styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Zorgt ervoor dat de titel bovenaan en de data daaronder staat */
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Styling voor de container die de COVID data bevat */
+#Covid-data {
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Titel van de pagina (centreren) */
+h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    text-align: center;  /* Dit zorgt ervoor dat de tekst in het midden komt */
+    margin-bottom: 40px;  /* Ruimte onder de titel voor de content */
+    width: 100%;  /* Zorgt ervoor dat de titel de volledige breedte gebruikt */
+}
+
+/* De styling voor de individuele datablokken (cases, deaths, recovered) */
+.data-box {
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Cases (blauw) */
+.data-box.cases {
+    background-color: #cce5ff;
+}
+
+.data-box.cases:hover {
+    background-color: #b3d7ff;
+}
+
+/* Deaths (rood) */
+.data-box.deaths {
+    background-color: #f8d7da;
+}
+
+.data-box.deaths:hover {
+    background-color: #f5c6cb;
+}
+
+/* Recovered (groen) */
+.data-box.recovered {
+    background-color: #d4edda;
+}
+
+.data-box.recovered:hover {
+    background-color: #c3e6cb;
+}
+
+/* Algemene stijl voor de kopjes (h2) */
+.data-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+/* Algemene stijl voor de cijfers (p) */
+.data-box p {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Foutmelding styling */
+.error-message {
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsieve design voor kleinere schermen */
+@media (max-width: 768px) {
+    #Covid-data {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .data-box {
+        padding: 20px;
+    }
+
+    .data-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .data-box p {
+        font-size: 1.5rem;
+    }
+}
